@@ -54,7 +54,7 @@ MonoBehaviour:
   index: 0
   speed: 0
   maxSpeed: 1
-  minSpeed: 5
+  minSpeed: 3
   clockWise: 0
 --- !u!1 &381185675076092354
 GameObject:
@@ -206,7 +206,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 381185675588429826}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 1a2006d9137963846bfcb81cb6df4dd7, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0

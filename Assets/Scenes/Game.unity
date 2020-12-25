@@ -791,7 +791,7 @@ MonoBehaviour:
   - {fileID: 381185674877224942, guid: 9cb08ec6511ad204c8218c2a91eed108, type: 3}
   numberOfSteps: 5
   playerStartPos: {fileID: 689417419}
-  stepDifference: 6
+  stepDifference: 5.5
   steps: []
 --- !u!1 &1231997829
 GameObject:
@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.41960785}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

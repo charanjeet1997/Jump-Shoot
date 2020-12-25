@@ -150,7 +150,7 @@ MonoBehaviour:
   isGrounded: 0
   jumpForce: 12
   downForce: 25
-  jumpDirection: {x: 0.4, y: 1}
+  jumpDirection: {x: 7, y: 1}
 --- !u!114 &8966154076754455626
 MonoBehaviour:
   m_ObjectHideFlags: 0

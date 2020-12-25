@@ -25,15 +25,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) && isGrounded)
         {
-            if(Input.mousePosition.x > GameCameraManager.Instance.mainCamera.WorldToScreenPoint(transform.position).x)
-            {
-                rb_player.velocity = (jumpDirection * jumpForce * clockWise);
-            }
-            else if(Input.mousePosition.x < GameCameraManager.Instance.mainCamera.WorldToScreenPoint(transform.position).x)
-            {
-                rb_player.velocity  =(jumpDirection * new Vector2(-clockWise,clockWise) * jumpForce );
-            }
+            mousePose = GetWorldPosition(Input.mousePosition);
+            dispPos = (mousePose - (Vector2)transform.position).normalized;
+            rb_player.velocity = ((dispPos * jumpDirection) + Vector2.up  * jumpForce * clockWise);
         }
+        
         else if(Input.GetMouseButtonDown(0) && !isGrounded)
         {
             StartCoroutine(ForceDown());
@@ -61,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb_player.gravityScale = 0;
         rb_player.velocity = Vector3.zero;
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.1f);
         rb_player.gravityScale = 1;
         rb_player.velocity = (Vector2.up * -clockWise * downForce);
     }
